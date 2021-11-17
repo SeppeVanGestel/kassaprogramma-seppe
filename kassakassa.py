@@ -40,11 +40,25 @@ totaal_drank = aantal_drank * 2
 
 rekening = totaal_friet + totaal_koniginnenhapjes + totaal_ijsjes + totaal_drank
 
-if rekening >= 50:
+korting = 0
+    
+if totaal_friet >=2:
+    korting = 20
+    nieuw_bedrag = rekening - korting
+    if rekening >= 150:
+        korting = 20
+        nieuw_bedrag = rekening - korting 
+
+elif totaal_friet >=2 and rekening >= 100:
+    korting = 12  
+
+elif rekening >= 50:
     korting = 5
     nieuw_bedrag = rekening- korting
-else:
-    pass    
+    
+
+
+         
 
    
 
@@ -99,35 +113,31 @@ print("_" *30)
 print("{:^30}".format("Teruggave:"))
 print("_" *30)
 
-if aantal1 > 0:
+#zet korting in een functie en doe een import, ...
+
+if aantal1 >= 0:
     print("| {:5} | {:20}|".format(aantal1,"briefjes van 100"))   
-else:
-    pass 
 
-if aantal2 > 0:
+
+if aantal2 >= 0:
     print("| {:5} | {:20}|".format(aantal2,"briefjes van 50"))   
-else:
-    pass 
 
-if aantal3 > 0:
+
+if aantal3 >= 0:
     print("| {:5} | {:20}|".format(aantal3,"briefjes van 20"))   
-else:
-    pass 
 
-if aantal4 > 0:
+
+if aantal4 >= 0:
     print("| {:5} | {:20}|".format(aantal4,"briefjes van 10"))   
-else:
-    pass 
 
-if aantal5 > 0:
+
+if aantal5 >= 0:
     print("| {:5} | {:20}|".format(aantal5,"briefjes van 5"))   
-else:
-    pass 
 
-if aantal6 > 0:
+
+if aantal6 >= 0:
     print("| {:5} | {:20}|".format(aantal6,"briefjes van 1"))   
-else:
-    pass 
+
 
 print("_" *30)
 print("Totaal terug te geven:", teruggave, "euro.")
